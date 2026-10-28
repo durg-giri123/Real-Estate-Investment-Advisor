@@ -114,7 +114,14 @@ The web application (`app/app.py`) provides:
 
 ---
 
-## 7. How to Run the Project
+## 7. Deployment & GitHub Links
+
+* **Live Streamlit Web Application:** [https://real-estate-investment-advisor-7ruhm7jdwwrsqxmbkwpstq.streamlit.app/](https://real-estate-investment-advisor-7ruhm7jdwwrsqxmbkwpstq.streamlit.app/)
+* **GitHub Repository:** [https://github.com/durg-giri123/Real-Estate-Investment-Advisor](https://github.com/durg-giri123/Real-Estate-Investment-Advisor)
+
+---
+
+## 8. How to Run Locally
 
 ```bash
 # 1. Clone repository and navigate to directory

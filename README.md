@@ -2,6 +2,9 @@
 
 An end-to-end Machine Learning intelligence application designed to assist real estate investors and homebuyers in evaluating property investment viability and forecasting 5-year capital valuation.
 
+🔗 **Live Streamlit Web Application:** [https://real-estate-investment-advisor-7ruhm7jdwwrsqxmbkwpstq.streamlit.app/](https://real-estate-investment-advisor-7ruhm7jdwwrsqxmbkwpstq.streamlit.app/)  
+📂 **GitHub Repository:** [https://github.com/durg-giri123/Real-Estate-Investment-Advisor](https://github.com/durg-giri123/Real-Estate-Investment-Advisor)
+
 ---
 
 ## 🌟 Key Highlights
@@ -49,10 +52,11 @@ Real Estate Investment Advisor/
 
 ## 🚀 Quick Start Guide
 
-### 1. Requirements
-Ensure Python 3.10+ is installed on your system.
+### 1. Access the Live App Online
+You can directly use the deployed application without any installation:
+👉 **[Open Live Streamlit Application](https://real-estate-investment-advisor-7ruhm7jdwwrsqxmbkwpstq.streamlit.app/)**
 
-### 2. Run the Streamlit Dashboard
+### 2. Local Installation & Setup
 Launch the interactive web application with a single command:
 ```bash
 streamlit run app/app.py
