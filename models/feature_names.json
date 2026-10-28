@@ -1,0 +1,15 @@
+[
+    "Area_sqft",
+    "Bedrooms",
+    "Bathrooms",
+    "Floors",
+    "Property_Age",
+    "Location_Score",
+    "School_Score",
+    "Current_Price",
+    "Price_per_SqFt",
+    "Total_Rooms",
+    "Avg_Room_Size",
+    "Bed_to_Bath_Ratio",
+    "Location_School_Index"
+]

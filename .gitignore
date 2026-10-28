@@ -1,0 +1,16 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary Office / Excel lock files
+~$*.xlsx
+~$*.docx
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/DURGESH/OneDrive - galgotiasuniversity.edu.in/Desktop/Real
+  Estate Investment Advisor/mlruns/1/models/m-1bf66206d3ec41f78fe7910f9e029474/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.11.9
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.15.1
+model_id: m-1bf66206d3ec41f78fe7910f9e029474
+model_size_bytes: 155044
+model_uuid: m-1bf66206d3ec41f78fe7910f9e029474
+prompts: null
+run_id: 93bd7bb8c4be49ecb6c0b528c7507468
+utc_time_created: '2026-10-28 18:03:18.319842'

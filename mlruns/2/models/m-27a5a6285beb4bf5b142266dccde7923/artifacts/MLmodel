@@ -1,0 +1,24 @@
+artifact_path: file:///C:/Users/DURGESH/OneDrive - galgotiasuniversity.edu.in/Desktop/Real
+  Estate Investment Advisor/mlruns/2/models/m-27a5a6285beb4bf5b142266dccde7923/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.15.1
+model_id: m-27a5a6285beb4bf5b142266dccde7923
+model_size_bytes: 272784
+model_uuid: m-27a5a6285beb4bf5b142266dccde7923
+prompts: null
+run_id: 5f006aa8195d4cacb88e3d7f715a9f2a
+utc_time_created: '2026-10-28 18:07:58.182081'
