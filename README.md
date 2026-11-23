@@ -21,31 +21,45 @@ An end-to-end Machine Learning intelligence application designed to assist real 
 ```
 Real Estate Investment Advisor/
 ├── app/
-│   └── app.py                      # Production Streamlit Web Dashboard
+│   └── app.py                             # Production Streamlit Web Dashboard
 ├── data/
-│   ├── raw/                        # Original Excel dataset
-│   └── processed/                  # Cleaned & featured datasets (Train/Test splits)
+│   ├── raw/
+│   │   └── merged_houseprice_regression_classification.xlsx
+│   └── processed/
+│       ├── real_estate_features.csv       # Full featured dataset (26 columns, 500 rows)
+│       ├── train_data.csv                 # Stratified Train Set (400 rows, 80%)
+│       └── test_data.csv                  # Holdout Test Set (100 rows, 20%)
 ├── docs/
-│   └── PROJECT_REPORT.md           # Comprehensive Capstone Project Report
+│   ├── PROJECT_REPORT.md                  # Comprehensive Capstone Project Report
+│   └── Real_Estate_Investment_Advisor_Project_Report.pdf
 ├── models/
-│   ├── best_regression_model.pkl   # Champion Ridge Regression Model (R²=0.8895)
-│   ├── best_classification_model.pkl # Logistic Regression Model
-│   ├── price_category_classifier.pkl # 3-Class Random Forest Model (77% Acc)
-│   ├── scaler.pkl                  # Fitted StandardScaler
-│   └── feature_names.json          # 13 Model input features metadata
+│   ├── best_regression_model.pkl          # Champion Ridge Regression Model (R² = 0.8895)
+│   ├── best_classification_model.pkl      # Champion Logistic Regression Model
+│   ├── price_category_classifier.pkl      # 3-Class Random Forest Model (77% Accuracy)
+│   ├── scaler.pkl                         # Fitted StandardScaler
+│   └── feature_names.json                 # 13 Model input features metadata
+├── notebooks/
+│   └── 01_real_estate_advisor_eda_and_modeling.ipynb # Complete Jupyter Notebook
 ├── reports/
-│   ├── figures/                    # Generated EDA and evaluation plots
-│   ├── classification_benchmark.csv # Classification comparison metrics
-│   └── regression_benchmark.csv    # Regression comparison metrics
+│   ├── figures/                           # 22 Generated EDA, confusion matrices & residual plots
+│   ├── classification_benchmark.csv       # Classification comparison metrics
+│   └── regression_benchmark.csv           # Regression comparison metrics
 ├── src/
-│   ├── data_preprocessing.py       # Data loading, cleaning, and quality audit
-│   ├── feature_engineering.py      # Domain feature creation and train-test splits
-│   ├── eda_analysis.py             # Automated Exploratory Data Analysis
-│   ├── train_classification.py     # Classification training with MLflow
-│   └── train_regression.py         # Regression training with MLflow
-├── mlflow.db                       # MLflow SQLite tracking database
-├── requirements.txt                # Python environment dependencies
-└── README.md                       # Project documentation
+│   ├── train_models.py                    # Master Unified Training Script
+│   ├── data_preprocessing.py              # Automated data loading, auditing & cleaning
+│   ├── feature_engineering.py             # Domain metrics, ratios & target generation
+│   ├── eda_analysis.py                    # Exploratory data analysis & statistical plotting
+│   ├── train_classification.py            # MLflow experiment tracking for classification
+│   └── train_regression.py                # MLflow experiment tracking for regression
+├── tests/
+│   ├── test_preprocessing.py              # Unit tests for data loading & cleaning
+│   ├── test_feature_engineering.py        # Unit tests for domain metrics & targets
+│   └── test_models.py                     # Unit tests for serialized model inferences
+├── mlflow.db                              # MLflow SQLite tracking database
+├── mlruns/                                # MLflow local experiment store
+├── Real_Estate_Investment_Advisor_Project_Report.pdf # 3-Page Executive PDF Report
+├── requirements.txt                       # Python dependencies
+└── README.md                              # Complete Project Guide & Documentation
 ```
 
 ---
@@ -63,8 +77,18 @@ streamlit run app/app.py
 ```
 Open your browser at `http://localhost:8501` to test property inputs, view visual EDA insights, and inspect model performance benchmarks.
 
-### 3. Retrain Pipeline (Optional)
-To regenerate features and re-run MLflow experiments:
+### 3. Run Automated Tests
+Execute the unit test suite to verify data preprocessing, feature engineering, and model inference:
+```bash
+python -m pytest tests/
+```
+
+### 4. Master Training Pipeline & MLflow Retraining
+To run the full end-to-end retraining pipeline and log fresh experiments in MLflow:
+```bash
+python src/train_models.py
+```
+Or run individual modular stages:
 ```bash
 # Data cleaning & feature engineering
 python src/feature_engineering.py
@@ -72,7 +96,7 @@ python src/feature_engineering.py
 # Exploratory data analysis
 python src/eda_analysis.py
 
-# Model training & MLflow tracking
+# Individual model training
 python src/train_classification.py
 python src/train_regression.py
 ```
